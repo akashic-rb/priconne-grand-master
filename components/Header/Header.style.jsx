@@ -58,21 +58,30 @@ export const StyledListItem = styled(ListItem)`
     position: relative;
     a {
         display: inline-block;
+        position: relative;
         img {
+            transition: opacity .5s ease 0s;
+            width: 100%;
             :first-child {
-                display: block;
+                opacity: 1;
             }
             :nth-child(2) {
-                display: none;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
         }
         :hover {
             img {
                 :first-child {
-                    display: none;
+                    opacity: 0;
                 }
                 :nth-child(2) {
-                    display: block;
+                    opacity: 1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                 }
             }
         }
