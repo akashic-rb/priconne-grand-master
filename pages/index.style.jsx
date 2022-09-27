@@ -7,8 +7,27 @@ export const TopSection = styled.section`
     background-image: url(${topBg.src});
     background-size: cover;
     width: 100%;
-    height: 58vw;
+    height: 57.78571vw;
     position: relative;
+    .visible {
+        display: block;
+    }
+    .hidden {
+        display: none;
+    }
+`
+
+export const BgMovie = styled.div`
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: relative;
+    overflow: hidden;
+    video {
+        width: auto;
+        height: 100%;
+        object-fit: contain;
+    }
 `
 
 export const ServiceInfo = styled.p`

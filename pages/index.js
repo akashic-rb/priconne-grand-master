@@ -8,7 +8,8 @@ import {
   Stores, 
   MovieList,
   StyledListItem, 
-  TopSection 
+  TopSection, 
+  BgMovie
 } from './index.style'
 import serviceInfo from "../assets/badge_top_text_end.png"
 import gameLogo from "../assets/fot_logo.png"
@@ -18,8 +19,14 @@ import btnPlayOff from "../assets/btn_play_kv_off.png"
 import btnPlayOn from "../assets/btn_play_kv_on.png"
 import gameplayText from "../assets/gameplay_text.jpg"
 import movieThumb from "../assets/movie_thumb.png"
+import useAutoplayVideo from '../hooks/useAutoplayVideo'
+import { useRef } from 'react'
 
 export default function Home() {
+  const refVideo = useRef()
+  const playBtn = useRef()
+  const { hideVideo, playVideo } = useAutoplayVideo(refVideo, playBtn)
+
   return (
     <div>
       <Head>
@@ -30,6 +37,12 @@ export default function Home() {
       
       <TopSection>
         <Logo></Logo>
+        {/* Bg Movie */}
+        <BgMovie>
+          <video ref={refVideo} onEnded={hideVideo} muted playsInline>
+            <source src={"/videos/top_movie.mp4"}/>
+          </video>
+        </BgMovie>
         {/* Service info */}
         <ServiceInfo>
           <img src={serviceInfo.src} alt="公開期間が終了しました プレイしていただき誠にありがとうございました 引き続きプリンセスコネクト！Re:Diveをよろしくお願いします" />
@@ -49,7 +62,7 @@ export default function Home() {
         </StoreList>
         <MovieList>
           <StyledListItem className="movie1">
-            <a className="change">
+            <a ref={playBtn} className="change" onClick={playVideo}>
               <img src={btnPlayOff.src} alt="Play" />
               <img src={btnPlayOn.src} alt="Play" />
             </a>
