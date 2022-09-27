@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import topBg from "../assets/kv.jpg"
+import headline from "../assets/Story/story_bg_story.png"
+import storyBg from "../assets/Story/story_bg.jpg"
 import { List, ListItem } from "./global.style"
 
 // TOP CONTENT
@@ -166,3 +168,60 @@ export const StyledListItem = styled(ListItem)`
 `
 
 // END TOP CONTENT
+
+// STORY SECTION
+export const StorySection = styled.section`
+    width: 100%;
+    max-width: 1400px;
+    position: relative;
+    background-image: url(${storyBg.src});
+    background-size: cover;
+    background-position: center;
+    @media (min-width: 768px) {
+        height: 99.7rem;
+    }
+    :after {
+        content: "";
+        width: 100%;
+        background-image: url(${headline.src});
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+    }
+`
+
+export const StoryInnerWrapper = styled.div`
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+`
+
+export const StoryContent = styled.div`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    position: absolute;
+    right: 5rem;
+    .story-title {
+        margin-left: 22.5rem; 
+    }
+    .text-1 {
+        margin-left: 5rem;
+    }
+    .text-2 {
+        margin-right: 2.5rem;
+    }
+    .text-3 {
+        margin-right: 4.2rem;
+    }
+`
+
+// END STORY SECTION

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { useRef } from 'react'
 import Head from 'next/head'
 import Logo from '../components/Logo/Logo'
 import { 
@@ -9,7 +10,10 @@ import {
   MovieList,
   StyledListItem, 
   TopSection, 
-  BgMovie
+  BgMovie,
+  StorySection,
+  StoryInnerWrapper,
+  StoryContent
 } from '../styles/index.style'
 import serviceInfo from "../assets/badge_top_text_end.png"
 import gameLogo from "../assets/fot_logo.png"
@@ -20,7 +24,12 @@ import btnPlayOn from "../assets/btn_play_kv_on.png"
 import gameplayText from "../assets/gameplay_text.jpg"
 import movieThumb from "../assets/movie_thumb.png"
 import useAutoplayVideo from '../hooks/useAutoplayVideo'
-import { useRef } from 'react'
+import storyTitle from "../assets/Story/story_title.png"
+import text1 from "../assets/Story/story_text_01.png"
+import text2 from "../assets/Story/story_text_02.png"
+import text3 from "../assets/Story/story_text_03.png"
+import FadeInComponent from '../components/FadeInComponent/FadeInComponent'
+
 
 export default function Home() {
   const refVideo = useRef()
@@ -75,7 +84,45 @@ export default function Home() {
           </StyledListItem>
         </MovieList>
       </TopSection>
-
+      {/* Story Section */}
+      <StorySection>
+        <StoryInnerWrapper>
+          <StoryContent>
+            <FadeInComponent>
+              <h2 className="story-title">
+                <picture>
+                  <source srcSet={storyTitle.src}/>
+                  <img src={storyTitle.src} alt="Story" />
+                </picture>
+              </h2>
+            </FadeInComponent>
+            <FadeInComponent>
+              <p className="text-1">
+                <picture>
+                  <source srcSet={text1.src}/>
+                  <img src={text1.src} alt="美しき大地アストライア大陸の王都『ランドソル』……ギルド【美食殿】のメンバーとして暮らしていたあなたがある時目を覚ましたのは、はじめて見る建物の中だった。" />
+                </picture>
+              </p>
+            </FadeInComponent>
+            <FadeInComponent>
+              <p className="text-2">
+                <picture>
+                  <source srcSet={text2.src}/>
+                  <img src={text2.src} alt="先に気がついていた小さなガイド役の少女同じギルドの仲間でもあるコッコロとともにあなたは元いた世界へ戻る方法と、仲間たちを探そうと決意する。"/>
+                </picture>
+              </p>
+            </FadeInComponent>
+            <FadeInComponent>
+              <p className="text-3">
+                <picture>
+                  <source srcSet={text3.src}/>
+                  <img src={text3.src} alt="本来の戦い方が通用しない不思議な世界を巡りながらあなたは記憶をなくした仲間たちを見つけ出していく。仲間たちの記憶を取り戻すには、「バトル」が鍵となるようで……？"/>
+                </picture>
+              </p>
+            </FadeInComponent>
+          </StoryContent>
+        </StoryInnerWrapper>
+      </StorySection>
     </div>
   )
 }
