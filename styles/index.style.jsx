@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import topBg from "../assets/kv.jpg"
-import { List, ListItem } from "../styles/global.style"
+import { List, ListItem } from "./global.style"
 
 // TOP CONTENT
 export const TopSection = styled.section`

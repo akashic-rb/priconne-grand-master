@@ -10,7 +10,7 @@ import {
   StyledListItem, 
   TopSection, 
   BgMovie
-} from './index.style'
+} from '../styles/index.style'
 import serviceInfo from "../assets/badge_top_text_end.png"
 import gameLogo from "../assets/fot_logo.png"
 import appStore from "../assets/badge_app.png"
