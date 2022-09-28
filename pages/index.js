@@ -21,7 +21,14 @@ import {
   SystemItem,
   GoodsSection,
   InnerWrapper,
-  StoryInnerWrapper
+  StoryInnerWrapper,
+  GoodsContentWrapper,
+  GoodsTitle,
+  GoodsText,
+  KkrText,
+  Texts,
+  GoodsLeftContent,
+  GoodsInnerWrapper
 } from '../styles/index.style'
 import serviceInfo from "../assets/badge_top_text_end.png"
 import gameLogo from "../assets/fot_logo.png"
@@ -47,7 +54,12 @@ import gameBtn3Off from "../assets/GameSystem/game_btn_3_off.png"
 import gameBtn3On from "../assets/GameSystem/game_btn_3_on.png"
 import gameBtn4Off from "../assets/GameSystem/game_btn_4_off.png"
 import gameBtn4On from "../assets/GameSystem/game_btn_4_on.png"
-
+import goodsTitle from "../assets/Goods/goods_title.png"
+import goodsText from "../assets/Goods/goods_text.png"
+import goodsKokkoro from "../assets/Goods/goods_kokkoro.png"
+import goods1 from "../assets/Goods/goods_1_off.png"
+import goods2 from "../assets/Goods/goods_2_off.png"
+import goods3 from "../assets/Goods/goods_3_off.png"
 
 export default function Home() {
   const refVideo = useRef()
@@ -148,7 +160,7 @@ export default function Home() {
       </LeaderSection>
 
       {/* Game System Section */}
-      <GameSystemSection>
+      <GameSystemSection id="game-system">
         <div className="bg"></div>
         <InnerWrapper>
           <FadeInComponent>
@@ -206,8 +218,63 @@ export default function Home() {
       </GameSystemSection>
       
       {/* Goods Section */}
-      <GoodsSection>
-      
+      <GoodsSection id="goods">
+        <GoodsInnerWrapper>
+          <GoodsContentWrapper>
+            <GoodsLeftContent>
+              <FadeInComponent>
+                <GoodsTitle>
+                  <picture>
+                    <source srcSet={goodsTitle.src}/>
+                    <img src={goodsTitle.src} alt="グッズ" />
+                  </picture>
+                </GoodsTitle>
+              </FadeInComponent>
+              <FadeInComponent>
+                <GoodsText>
+                  <picture>
+                    <source srcSet={goodsText.src}/>
+                    <img src={goodsText.src} alt="おしゃべりチエルちゃん、猛訓打撃道！プリコネR野球盤、エリザベスパークの特大顔出しパネルがプリコネ！グランドマスターズにも登場！ゲーム内のどこにいるか探してみてね！" />
+                  </picture>
+                </GoodsText>
+              </FadeInComponent>
+              <FadeInComponent>
+                <KkrText>
+                  <picture>
+                    <source srcSet={goodsKokkoro.src}/>
+                    <img src={goodsKokkoro.src} alt="販売は終了しました！" />
+                  </picture>
+                </KkrText>
+              </FadeInComponent>
+            </GoodsLeftContent>
+            <Texts>
+              <FadeInComponent>
+                <p>
+                  <picture>
+                    <source srcSet={goods1.src}/>
+                    <img src={goods1.src} alt="おしゃべりチエルちゃん 新規で録り下ろされた音声内蔵のぬいぐるみ！" />
+                  </picture>
+                </p>
+              </FadeInComponent>
+              <FadeInComponent>
+                <p>
+                  <picture>
+                    <source srcSet={goods2.src}/>
+                    <img src={goods2.src} alt="猛訓打撃道！プリコネR野球盤 エポック社の全面協力により、あの野球盤がプリコネバージョンに！" />
+                  </picture>
+                </p>
+              </FadeInComponent>
+              <FadeInComponent>
+                <p>
+                  <picture>
+                    <source srcSet={goods3.src}/>
+                    <img src={goods3.src} alt="エリザベスパークの特大顔出しパネル エリザベスパークに設置されていた顔出しパネルを実寸で商品化！" />
+                  </picture>
+                </p>
+              </FadeInComponent>
+            </Texts>
+          </GoodsContentWrapper>
+        </GoodsInnerWrapper>
       </GoodsSection>
     </div>
   )

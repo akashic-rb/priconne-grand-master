@@ -1,10 +1,11 @@
 import styled from "styled-components"
+import { List, ListItem } from "./global.style"
 import topBg from "../assets/kv.jpg"
 import headline from "../assets/Story/story_bg_story.png"
 import storyBg from "../assets/Story/story_bg.jpg"
 import gameBg from "../assets/GameSystem/game_bg.jpg"
 import goodsBg from "../assets/Goods/goods_bg.png"
-import { List, ListItem } from "./global.style"
+import goodsBgGoods from "../assets/Goods/goods_bg_goods.png"
 
 // TOP CONTENT
 export const TopSection = styled.section`
@@ -282,7 +283,7 @@ export const GameTitle = styled.h2`
     right: 0;
 `
 
-export const SystemList = styled.ul`
+export const SystemList = styled(List)`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -293,7 +294,7 @@ export const SystemList = styled.ul`
     gap: 1rem;
 `
 
-export const SystemItem = styled.li`
+export const SystemItem = styled(ListItem)`
     position: relative;
     img {
         :first-child {
@@ -327,8 +328,77 @@ export const GoodsSection = styled.section`
     height: 66.7rem;
     background-image: url(${goodsBg.src});
     background-size: cover;
-    background-position: auto 100%; 
+    background-position: center;
+    position: relative;
+    :after {
+        content: '';
+        display: block;
+        @media(min-width: 768px) {
+            width: 13.4rem;
+            height: 100%;
+        }
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: url(${goodsBgGoods.src});
+        background-size: auto 100%;
+    }
 `
 
+export const GoodsInnerWrapper = styled(InnerWrapper)`
+    display: flex;
+    align-items: center;
+    @media(min-width: 768px) {
+        max-width: 1400px;
+    }
+`
 
+export const GoodsContentWrapper = styled.div`
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .5rem;
+`
+
+export const GoodsTitle = styled.h2`
+    img {
+        width: 50%;
+    }
+`
+
+export const GoodsText = styled.p`
+    img {
+        width: 90%;
+        margin: 0 0 0 1.5rem;
+    }
+`
+
+export const KkrText = styled.p`
+    img {
+        width: 80%;
+        padding: 1.5rem 0 0 0;
+    }
+`
+
+export const GoodsLeftContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+`
+
+export const Texts = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+        margin: 0
+    }
+    img {
+        width: 100%;
+    }
+`
 // END GOODS SECTION
