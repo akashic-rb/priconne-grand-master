@@ -2,6 +2,8 @@ import styled from "styled-components"
 import topBg from "../assets/kv.jpg"
 import headline from "../assets/Story/story_bg_story.png"
 import storyBg from "../assets/Story/story_bg.jpg"
+import gameBg from "../assets/GameSystem/game_bg.jpg"
+import goodsBg from "../assets/Goods/goods_bg.png"
 import { List, ListItem } from "./global.style"
 
 // TOP CONTENT
@@ -17,6 +19,12 @@ export const TopSection = styled.section`
     .hidden {
         display: none;
     }
+`
+
+export const InnerWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    position: relative;
 `
 
 export const BgMovie = styled.div`
@@ -195,11 +203,8 @@ export const StorySection = styled.section`
     }
 `
 
-export const StoryInnerWrapper = styled.div`
-    width: 100%;
+export const StoryInnerWrapper = styled(InnerWrapper)`
     max-width: 1400px;
-    height: 100%;
-    position: relative;
     margin: 0 auto;
 `
 
@@ -232,7 +237,98 @@ export const StoryContent = styled.div`
 export const LeaderSection = styled.section`
     width: 100%;
     @media(min-width: 768px) {
-        height: 100vh;
+        height: 110vh;
     }
 `
 // END LEADER SECTION
+
+// GAME SYSTEM SECTION
+export const GameSystemSection = styled.section`
+    width: 100%;
+    @media(min-width: 768px) {
+        height: 100vh;
+    }
+    position: relative;
+    .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: url(${gameBg.src}) repeat-x 0 0/auto 100%;
+        animation: background-scroll-p 60s linear infinite;
+    }
+    @keyframes background-scroll-p {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: -200rem 0;
+        }
+    }
+`
+
+export const GameInnerWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    position: relative;
+`
+
+export const GameTitle = styled.h2`
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 3rem;
+    left: 0;
+    right: 0;
+`
+
+export const SystemList = styled.ul`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 7rem;
+    left: 0;
+    right: 0;
+    gap: 1rem;
+`
+
+export const SystemItem = styled.li`
+    position: relative;
+    img {
+        :first-child {
+            opacity: 1;
+            transition: transform .5s ease;
+        }
+        :nth-child(2) {
+            opacity: 0;
+            position: absolute;
+            inset: 0;
+        }
+    }
+    :hover {
+        img {
+            transform: translateY(-2rem);
+            :first-child {
+                opacity: 0;
+            }
+            :nth-child(2) {
+                opacity: 1;
+                transition: transform .5s ease;
+            }
+        }
+    }
+`
+// END GAME SYSTEM SECTION
+
+// GOOODS SECTION
+export const GoodsSection = styled.section`
+    width: 100%;
+    height: 66.7rem;
+    background-image: url(${goodsBg.src});
+    background-size: cover;
+    background-position: auto 100%; 
+`
+
+
+// END GOODS SECTION

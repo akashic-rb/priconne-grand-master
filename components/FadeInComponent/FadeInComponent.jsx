@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useRef, useState } from "react"
 
-const FadeInComponent = ({ref, children}) => {
+const FadeInComponent = ({ children }) => {
     const [isObserved, setIsObserved] = useState(false)
     const domRef = useRef()
 

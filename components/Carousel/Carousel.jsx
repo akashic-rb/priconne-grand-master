@@ -99,7 +99,6 @@ const Carousel = ({ infiniteLoop, show }) => {
         }
     ], [])
     const [length, setLength] = useState(leaders.length)
-    
     const [isRepeating, setIsRepeating] = useState(infiniteLoop && children.length > show)
     const [transitionEnabled, setTransitionEnabled] = useState(true)
 
@@ -170,23 +169,6 @@ const Carousel = ({ infiniteLoop, show }) => {
         }
     }
 
-    const renderExtraPrev = () => {
-        let output = []
-        for (let index = 0; index < show; index++) {
-            output.push(children[length - 1 - index])
-        }
-        output.reverse()
-        return output
-    }
-
-    const renderExtraNext = () => {
-        let output = []
-        for (let index = 0; index < show; index++) {
-            output.push(children[index])
-        }
-        return output
-    }
-
     return (
         <CarouselWrapper>
             {/* Title */}
@@ -215,15 +197,7 @@ const Carousel = ({ infiniteLoop, show }) => {
                     }}
                     onTransitionEnd={() => handleTransitionEnd()}
                 >
-                    {
-                        (length > show && isRepeating) &&
-                        renderExtraPrev()
-                    }
-                    {}
-                    {
-                        (length > show && isRepeating) &&
-                        renderExtraNext()
-                    }
+                    
                 </div>
             </div>
             {/* Paginator */}

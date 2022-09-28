@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { useRef } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import Logo from '../components/Logo/Logo'
 import { 
   GameLogo, 
@@ -12,9 +13,15 @@ import {
   TopSection, 
   BgMovie,
   StorySection,
-  StoryInnerWrapper,
   StoryContent,
-  LeaderSection
+  LeaderSection,
+  GameSystemSection,
+  GameTitle,
+  SystemList,
+  SystemItem,
+  GoodsSection,
+  InnerWrapper,
+  StoryInnerWrapper
 } from '../styles/index.style'
 import serviceInfo from "../assets/badge_top_text_end.png"
 import gameLogo from "../assets/fot_logo.png"
@@ -31,6 +38,15 @@ import text2 from "../assets/Story/story_text_02.png"
 import text3 from "../assets/Story/story_text_03.png"
 import FadeInComponent from '../components/FadeInComponent/FadeInComponent'
 import Carousel from '../components/Carousel/Carousel'
+import gameTitle from "../assets/GameSystem/game_title.png"
+import gameBtn1Off from "../assets/GameSystem/game_btn_1_off.png"
+import gameBtn1On from "../assets/GameSystem/game_btn_1_on.png"
+import gameBtn2Off from "../assets/GameSystem/game_btn_2_off.png"
+import gameBtn2On from "../assets/GameSystem/game_btn_2_on.png"
+import gameBtn3Off from "../assets/GameSystem/game_btn_3_off.png"
+import gameBtn3On from "../assets/GameSystem/game_btn_3_on.png"
+import gameBtn4Off from "../assets/GameSystem/game_btn_4_off.png"
+import gameBtn4On from "../assets/GameSystem/game_btn_4_on.png"
 
 
 export default function Home() {
@@ -130,6 +146,69 @@ export default function Home() {
       <LeaderSection>
         <Carousel></Carousel>
       </LeaderSection>
+
+      {/* Game System Section */}
+      <GameSystemSection>
+        <div className="bg"></div>
+        <InnerWrapper>
+          <FadeInComponent>
+            <GameTitle>
+              <picture>
+                <source srcSet={gameTitle.src}/>
+                <img src={gameTitle.src} alt="ゲームシステム" />
+              </picture>
+            </GameTitle>
+          </FadeInComponent>
+
+          <SystemList>
+            <SystemItem>
+              <FadeInComponent>
+                <Link href={"/"}>
+                  <a>
+                    <img src={gameBtn1Off.src} alt="ゲームルール 基本的な遊び方 開始から終了までの流れ" />
+                    <img src={gameBtn1On.src} alt="ゲームルール 基本的な遊び方 開始から終了までの流れ" />
+                  </a>
+                </Link>
+              </FadeInComponent>
+            </SystemItem>
+            <SystemItem>
+              <FadeInComponent>
+                <Link href={"/"}>
+                  <a>
+                    <img src={gameBtn2Off.src} alt="シナジーについて ユニットを揃えることで発動するシナジー効果" />
+                    <img src={gameBtn2On.src} alt="シナジーについて ユニットを揃えることで発動するシナジー効果" />
+                  </a>
+                </Link>
+              </FadeInComponent>
+            </SystemItem>
+            <SystemItem>
+              <FadeInComponent>
+                <Link href={"/"}>
+                  <a>
+                    <img src={gameBtn3Off.src} alt="装備一覧 モンスター討伐で入手できる装備の一覧、その効果" />
+                    <img src={gameBtn3On.src} alt="装備一覧 モンスター討伐で入手できる装備の一覧、その効果" />
+                  </a>
+                </Link>
+              </FadeInComponent>
+            </SystemItem>
+            <SystemItem>
+              <FadeInComponent>
+                <Link href={"/"}>
+                  <a>
+                    <img src={gameBtn4Off.src} alt="ヘルプ 用語の説明など詳細はこちら" />
+                    <img src={gameBtn4On.src} alt="ヘルプ 用語の説明など詳細はこちら" />
+                  </a>
+                </Link>
+              </FadeInComponent>
+            </SystemItem>
+          </SystemList>
+        </InnerWrapper>
+      </GameSystemSection>
+      
+      {/* Goods Section */}
+      <GoodsSection>
+      
+      </GoodsSection>
     </div>
   )
 }
