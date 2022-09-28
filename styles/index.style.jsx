@@ -177,19 +177,21 @@ export const StorySection = styled.section`
     background-image: url(${storyBg.src});
     background-size: cover;
     background-position: center;
+    font-size: 0;
     @media (min-width: 768px) {
         height: 99.7rem;
     }
     :after {
         content: "";
         width: 100%;
+        display: block;
         background-image: url(${headline.src});
+        background-size: auto 100%;
         background-repeat: no-repeat;
         position: absolute;
         top: 0;
         left: 0;
         bottom: 0;
-        z-index: 100;
     }
 `
 
@@ -225,3 +227,12 @@ export const StoryContent = styled.div`
 `
 
 // END STORY SECTION
+
+// LEADER SECTION
+export const LeaderSection = styled.section`
+    width: 100%;
+    @media(min-width: 768px) {
+        height: 100vh;
+    }
+`
+// END LEADER SECTION

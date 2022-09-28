@@ -123,7 +123,7 @@ export const StyledListItem = styled(ListItem)`
 `
 
 export const StyledLink = ({href, children}) => (
-    <Link prefetch href={href} passHref>
+    <Link href={href} passHref>
         <a>{ children }</a>
     </Link>
 )

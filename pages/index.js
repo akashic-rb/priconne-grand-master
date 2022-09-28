@@ -13,7 +13,8 @@ import {
   BgMovie,
   StorySection,
   StoryInnerWrapper,
-  StoryContent
+  StoryContent,
+  LeaderSection
 } from '../styles/index.style'
 import serviceInfo from "../assets/badge_top_text_end.png"
 import gameLogo from "../assets/fot_logo.png"
@@ -29,6 +30,7 @@ import text1 from "../assets/Story/story_text_01.png"
 import text2 from "../assets/Story/story_text_02.png"
 import text3 from "../assets/Story/story_text_03.png"
 import FadeInComponent from '../components/FadeInComponent/FadeInComponent'
+import Carousel from '../components/Carousel/Carousel'
 
 
 export default function Home() {
@@ -44,7 +46,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <TopSection>
+      <TopSection id="top">
         <Logo></Logo>
         {/* Bg Movie */}
         <BgMovie>
@@ -85,7 +87,7 @@ export default function Home() {
         </MovieList>
       </TopSection>
       {/* Story Section */}
-      <StorySection>
+      <StorySection id="story">
         <StoryInnerWrapper>
           <StoryContent>
             <FadeInComponent>
@@ -123,6 +125,11 @@ export default function Home() {
           </StoryContent>
         </StoryInnerWrapper>
       </StorySection>
+
+      {/* Leader Section */}
+      <LeaderSection>
+        <Carousel></Carousel>
+      </LeaderSection>
     </div>
   )
 }
