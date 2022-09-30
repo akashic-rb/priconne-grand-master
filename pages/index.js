@@ -28,7 +28,8 @@ import {
   KkrText,
   Texts,
   GoodsLeftContent,
-  GoodsInnerWrapper
+  GoodsInnerWrapper,
+  Wrapper
 } from '../styles/index.style'
 import serviceInfo from "../assets/badge_top_text_end.png"
 import gameLogo from "../assets/fot_logo.png"
@@ -67,7 +68,7 @@ export default function Home() {
   const { hideVideo, playVideo } = useAutoplayVideo(refVideo, playBtn)
 
   return (
-    <div>
+    <Wrapper>
       <Head>
         <title>プリコネ！グランドマスターズ公式サイト | プリンセスコネクト！Re:Dive (プリコネR) | Cygames</title>
         <meta name="description" content="プリコネ！グランドマスターズ 完全無料アプリ！期間限定で公開！" />
@@ -155,7 +156,7 @@ export default function Home() {
       </StorySection>
 
       {/* Leader Section */}
-      <LeaderSection>
+      <LeaderSection id="leaders">
         <Carousel></Carousel>
       </LeaderSection>
 
@@ -276,6 +277,6 @@ export default function Home() {
           </GoodsContentWrapper>
         </GoodsInnerWrapper>
       </GoodsSection>
-    </div>
+    </Wrapper>
   )
 }

@@ -1,15 +1,27 @@
+@font-face {
+  src: url(/fonts/osaka.unicode.ttf);
+  font-family: Osaka;
+}
+
 @media (min-width: 768px) {
   html { 
     font-size: .71429vw;
   }
 }
 
+html {
+  overflow-y: auto;
+  -webkit-scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
 
 html,
 body {
+  
   padding: 0;
   margin: 0;
-  font-family: YakuHanMP_Noto, "Noto Serif JP", "Hiragino Mincho ProN", "Yu Mincho", YuMincho, serif;
+  font-family: YakuHanMP, 'Noto Sans JP', Osaka san-serif;
   -webkit-text-size-adjust: 100%;
   color: #f4f2ee;
 }

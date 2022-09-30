@@ -1,11 +1,13 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import { useEffect, useRef } from 'react';
 
 const Document = () => {
-    
+
     return (
-        <Html>
+        <Html >
             <Head>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanmp-noto.min.css"/>
+                <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&amp;display=swap" rel="stylesheet"/>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.4.1/dist/css/yakuhanmp.min.css"></link>
             </Head>
             <body>
                 <Main />

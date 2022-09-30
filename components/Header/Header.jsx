@@ -26,21 +26,21 @@ const PageHeader = () => {
                     <Nav>
                         <StyledList>
                             <StyledListItem>
-                                <StyledLink href={"/"}>
-                                    <StyledImage src={story.src} alt="Not Found"></StyledImage>
-                                    <StyledImage src={storyOn.src} alt="Not Found"></StyledImage>
+                                <StyledLink href={"/#story"}>
+                                    <StyledImage src={story.src} alt="ストーリー"></StyledImage>
+                                    <StyledImage src={storyOn.src} alt="ストーリー"></StyledImage>
                                 </StyledLink>
                             </StyledListItem>
                             <StyledListItem>
-                                <StyledLink href={"/"}>
-                                    <StyledImage src={leader.src} alt="Not Found"></StyledImage>
-                                    <StyledImage src={leaderOn.src} alt="Not Found"></StyledImage>
+                                <StyledLink href={"/#leaders"}>
+                                    <StyledImage src={leader.src} alt="リーダー"></StyledImage>
+                                    <StyledImage src={leaderOn.src} alt="リーダー"></StyledImage>
                                 </StyledLink>
                             </StyledListItem>
                             <StyledListItem>
-                                <StyledLink href={"/"}>
-                                    <StyledImage src={game.src} alt="Not Found"></StyledImage>
-                                    <StyledImage src={gameOn.src} alt="Not Found"></StyledImage>
+                                <StyledLink href={"/#game-system"}>
+                                    <StyledImage src={game.src} alt="ゲームシステム"></StyledImage>
+                                    <StyledImage src={gameOn.src} alt="ゲームシステム"></StyledImage>
                                 </StyledLink>
                             </StyledListItem>
                         </StyledList>

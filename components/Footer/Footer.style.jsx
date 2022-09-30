@@ -3,12 +3,13 @@ import { List, ListItem } from "../../styles/global.style";
 
 export const Footer = styled.footer`
     width: 100%;
-    background: rgba(25, 27, 28, 1);
+    background: #fff;
     .menu-list {
         display: flex;
         justify-content: space-between;
-        font-size: ;
-        color: ;
+        font-size: 1.2rem;
+        line-height: 1.66667;
+        color: #083b5a;
         @media(min-width:768px) {
             width: 49.5rem;
             margin: 5.5rem auto;
@@ -123,5 +124,45 @@ export const BannerList = styled.dl`
                 }
             }
         }
+    }
+`
+
+export const CopyrightList = styled(List)`
+    width: 100%;
+    font-weight: 700;
+    @media(min-width: 768px) {
+        padding-bottom: 5rem;
+    }
+    .remaker-disclaim {
+        margin: 5rem 0 0 0;
+        p {
+            text-align: center;
+            color: #083b5a;
+            font-size: 1.2rem;
+            line-height: 1.66667;
+            a {
+                color: blue;
+            }
+        }
+    }
+`
+
+export const PublisherLogo = styled(ListItem)`
+    display: flex;
+    justify-content: center;
+    margin: 4.3rem auto;
+    img {
+        @media(min-width: 768px) {
+            width: 10.9rem;
+        }
+    }
+`
+
+export const CopyrightNotes = styled(ListItem)`
+    p {
+        text-align: center;
+        color: #083b5a;
+        font-size: 1.2rem;
+        line-height: 1.66667;
     }
 `

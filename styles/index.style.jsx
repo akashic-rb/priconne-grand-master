@@ -7,6 +7,10 @@ import gameBg from "../assets/GameSystem/game_bg.jpg"
 import goodsBg from "../assets/Goods/goods_bg.png"
 import goodsBgGoods from "../assets/Goods/goods_bg_goods.png"
 
+export const Wrapper = styled.div`
+    
+`
+
 // TOP CONTENT
 export const TopSection = styled.section`
     background-image: url(${topBg.src});

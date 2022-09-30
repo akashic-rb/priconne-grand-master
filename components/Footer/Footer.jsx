@@ -4,8 +4,11 @@ import {
     AboutApp,
     AppDetails,
     BannerList,
+    CopyrightList,
+    CopyrightNotes,
     Footer, 
     InnerWrapper,
+    PublisherLogo,
     StyledList,
     StyledListItem
 } from "./Footer.style";
@@ -14,6 +17,7 @@ import appTextPc from "../../assets/Footer/app_text_pc.png"
 import fotLogo from "../../assets/Footer/fot_logo.png"
 import fotBanner1 from "../../assets/Footer/fot_banner_1.png"
 import fotBanner2 from "../../assets/Footer/fot_banner_2.png"
+import fot_logo from "../../assets/Footer/fot_logo_cygames.png"
 
 const PageFooter = () => {
 
@@ -87,6 +91,26 @@ const PageFooter = () => {
                     </ul>
                 </dd>
             </BannerList>
+            <CopyrightList>
+                <PublisherLogo>
+                    <picture>
+                        <source srcSet={fot_logo.src}/>
+                        <img src={fot_logo.src} alt="Cygames" loading="lazy" decoding="async"/>
+                    </picture>
+                </PublisherLogo>
+                <CopyrightNotes>
+                    <p>AppleとAppleロゴは米国およびその他の国で登録されたApple Inc.の商標です。</p>
+                    <p>GooglePlayおよびGooglePlayロゴは、Google LLCの商標です。</p>
+                    <p>このホームページに掲載されている一切の文書・図版・写真等を手段や形態を問わず複製、転載することを禁じます。</p>
+                </CopyrightNotes>
+                <div className="remaker-disclaim">
+                    <p>Coding with love by
+                        {' '}<Link href={"https://github.com/akashic-rb/priconne-grand-masters"}><a>Akashic</a></Link>
+                    </p>
+                    <p>This site is a remake of official <Link href={"https://priconne-grandmasters.jp"}><a>Priconne Grand Masters</a></Link></p>
+                    <p></p>
+                </div>
+            </CopyrightList>
         </Footer>
     );
 }
