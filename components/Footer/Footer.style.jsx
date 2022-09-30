@@ -129,7 +129,6 @@ export const BannerList = styled.dl`
 
 export const CopyrightList = styled(List)`
     width: 100%;
-    font-weight: 700;
     @media(min-width: 768px) {
         padding-bottom: 5rem;
     }
