@@ -2,7 +2,6 @@
 import { useRef } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import Logo from '../components/Logo/Logo'
 import { 
   GameLogo, 
   ServiceInfo, 
@@ -76,7 +75,6 @@ export default function Home() {
       </Head>
       
       <TopSection id="top">
-        <Logo></Logo>
         {/* Bg Movie */}
         <BgMovie>
           <video ref={refVideo} onEnded={hideVideo} muted playsInline>

@@ -16,9 +16,10 @@ import leaderOn from "../../assets/Menu/hed_leader_on.png"
 import game from "../../assets/Menu/hed_game_off.png"
 import gameOn from "../../assets/Menu/hed_game_on.png"
 import end from "../../assets/Menu/hed_icon_end.png"
-import Logo from "../Logo/Logo";
+import { Logo, LogoOnScroll } from "../Logo/Logo";
 
 const PageHeader = () => {
+
     return (
         <Header>
             <HeaderWrapper>
@@ -51,6 +52,7 @@ const PageHeader = () => {
                 </InnerHeader>
             </HeaderWrapper>
             <Logo></Logo>
+            <LogoOnScroll></LogoOnScroll>
         </Header>
     );
 }
