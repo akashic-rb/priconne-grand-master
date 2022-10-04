@@ -8,6 +8,11 @@
     font-size: .71429vw;
   }
 }
+@media (min-width: 1400px) {
+  html { 
+    font-size: 10px;
+  }
+}
 
 html {
   overflow-y: auto;

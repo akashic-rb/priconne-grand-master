@@ -14,7 +14,6 @@ export const Logo = () => {
 }
 
 export const LogoOnScroll = () => {
-    const { width } = useWindowSize()
     const [scrollPosition, setScrollPosition] = useState(0)
     const ref = useRef()
 

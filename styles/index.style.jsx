@@ -30,6 +30,10 @@ export const InnerWrapper = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
+    @media(min-width: 768px) {
+        max-width: 100%;
+        margin: 0 auto;
+    }
 `
 
 export const BgMovie = styled.div`
@@ -185,7 +189,6 @@ export const StyledListItem = styled(ListItem)`
 // STORY SECTION
 export const StorySection = styled.section`
     width: 100%;
-    max-width: 1400px;
     position: relative;
     background-image: url(${storyBg.src});
     background-size: cover;
@@ -251,7 +254,7 @@ export const LeaderSection = styled.section`
 export const GameSystemSection = styled.section`
     width: 100%;
     @media(min-width: 768px) {
-        height: 100vh;
+        height: 67.7rem;
     }
     position: relative;
     .bg {
