@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import { List, ListItem } from "./global.style"
 import topBg from "../assets/kv.jpg"
+import mobileTopBg from "../assets/Mobile/kv.png"
 import headline from "../assets/Story/story_bg_story.png"
 import storyBg from "../assets/Story/story_bg.jpg"
 import gameBg from "../assets/GameSystem/game_bg.jpg"
@@ -8,21 +9,30 @@ import goodsBg from "../assets/Goods/goods_bg.png"
 import goodsBgGoods from "../assets/Goods/goods_bg_goods.png"
 
 export const Wrapper = styled.div`
-    
+    width: 100%;
+    height: 100%;
+    position: relative;
 `
 
 // TOP CONTENT
 export const TopSection = styled.section`
-    background-image: url(${topBg.src});
-    background-size: cover;
-    width: 100%;
-    height: 57.78571vw;
+    height: 136rem;
+    background-image: url(${mobileTopBg.src});
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
     position: relative;
     .visible {
         display: block;
     }
     .hidden {
         display: none;
+    }
+    @media(min-width: 768px) {
+        background-image: url(${topBg.src});
+        background-size: cover;
+        width: 100%;
+        height: 57.78571vw;
     }
 `
 
@@ -47,12 +57,21 @@ export const BgMovie = styled.div`
         height: 100%;
         object-fit: contain;
     }
+    @media(max-width: 767px) {
+        opacity: 0;
+        display: none !important;
+    }
 `
 
 export const ServiceInfo = styled.p`
+    margin: 0;
+    width: 68rem;
+    position: absolute;
+    bottom: 17.7rem;
+    left: 50%;
+    transform: translate(-50%, 0);
     @media(min-width: 768px) {
         width: 30.8vw;
-        position: absolute;
         bottom: 5.5vw;
         right: 1.65vw;
         margin: 0;
@@ -63,18 +82,29 @@ export const ServiceInfo = styled.p`
 `
 
 export const StoreList = styled.dl`
-    width: 30.8vw;
-    position: absolute;
-    bottom: 2.5vw;
-    right: 1.65vw;
-    padding: 0 1.21vw 0 1vw;
+    width: 64.6rem;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    bottom: 8.8rem;
+    @media(max-width: 767px) {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @media(min-width: 768px) {
+        width: 30.8vw;
+        bottom: 2.5vw;
+        right: 1.65vw;
+        padding: 0 1.21vw 0 1vw;
+    }
 `
 
 export const GameLogo = styled.dt`
-    width: 10.21vw;
-    cursor: pointer;
+    width: 19rem;
+    @media(min-width: 768px) {
+        width: 10.21vw;
+        cursor: pointer;
+    }
     img {
         width: 100%;
     }
@@ -92,9 +122,12 @@ export const Stores = styled(List)`
         list-style-type: none;
     }
     .apple {
-        width: 7.65vw;
+        width: 18.7rem;
+        @media(min-width: 768px) {
+            width: 7.65vw;
+            cursor: pointer;
+        }
         margin: 0 .57vw;
-        cursor: pointer;
         img {
             width: 100%;
         }
@@ -105,8 +138,11 @@ export const Stores = styled(List)`
         }
     }
     .google {
-        width: 9.5vw;
-        cursor: pointer;
+        width: 23rem;
+        @media(min-width: 768px) {
+            width: 9.5vw;
+            cursor: pointer;
+        }
         img {
             width: 100%;
         }
@@ -160,26 +196,40 @@ export const StyledListItem = styled(ListItem)`
                     }
                 }
             }
+            @media(max-width: 767px) {
+                display: none;
+                opacity: 0;
+            }
         }
     }
     :nth-child(2) {
-        width: 18vw;
         position: absolute;
-        bottom: 2.42vw;
-        left: 2.78vw;
-        a {
-            margin-top: 0.24vw;
-            cursor: pointer;
-            :hover {
-                img {
-                    opacity: .5;
-                    transition: opacity .5s ease;
+        width: 32.7rem;
+        bottom: 39.6rem;
+        right: 6rem;
+        @media(min-width: 768px) {
+            width: 18vw;
+            bottom: 2.42vw;
+            left: 2.78vw;
+            a {
+                margin-top: 0.24vw;
+                cursor: pointer;
+                :hover {
+                    img {
+                        opacity: .5;
+                        transition: opacity .5s ease;
+                    }
                 }
             }
+            img {
+                width: 100%;
+                transition: opacity .5s ease;
+            }
         }
-        img {
-            width: 100%;
-            transition: opacity .5s ease;
+        @media(max-width: 767px) {
+            .game-text {
+                display: none;
+            }
         }
     }
 `

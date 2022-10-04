@@ -7,7 +7,7 @@ const topSection = typeof window !== "undefined" ? 57.78 / 100 * window.innerWid
 
 export const Logo = () => {
     return (
-        <Wrapper style={{width: "30rem", zIndex: "9999"}}>
+        <Wrapper style={{zIndex: "9999"}}>
             <StyledImage src={LogoGm.src} alt="Logo"></StyledImage>
         </Wrapper>
     )

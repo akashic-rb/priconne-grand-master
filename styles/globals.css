@@ -16,6 +16,7 @@
 }
 
 html {
+  font-size: 1.333333vw;
   overflow-y: auto;
   -webkit-scroll-behavior: smooth;
   scroll-behavior: smooth;
