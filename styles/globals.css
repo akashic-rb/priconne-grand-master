@@ -5,6 +5,7 @@
 
 @media (min-width: 768px) {
   html { 
+    line-height: 1.15;
     font-size: .71429vw;
   }
 }

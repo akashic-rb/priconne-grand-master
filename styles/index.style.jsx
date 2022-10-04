@@ -31,7 +31,7 @@ export const InnerWrapper = styled.div`
     height: 100%;
     position: relative;
     @media(min-width: 768px) {
-        max-width: 100%;
+        max-width: 1400px;
         margin: 0 auto;
     }
 `
@@ -225,17 +225,32 @@ export const StoryContent = styled.div`
     gap: 5rem;
     position: absolute;
     right: 5rem;
+    img {
+        width: 100%;
+    }
     .story-title {
-        margin-left: 22.5rem; 
+        @media(min-width: 768px) {
+            width: 32.2rem;
+            margin-left: 22.5rem; 
+        }
     }
     .text-1 {
-        margin-left: 5rem;
+        @media(min-width: 768px) {
+            width: 46.5rem;
+            margin-left: 5rem;
+        }
     }
     .text-2 {
-        margin-right: 2.5rem;
+        @media(min-width: 768px) {
+            width: 54.3rem;
+            margin-right: 2.5rem;
+        }
     }
     .text-3 {
-        margin-right: 4.2rem;
+        @media(min-width: 768px) {
+            width: 54.9rem;
+            margin-right: 4.2rem;
+        }
     }
 `
 
@@ -254,7 +269,7 @@ export const LeaderSection = styled.section`
 export const GameSystemSection = styled.section`
     width: 100%;
     @media(min-width: 768px) {
-        height: 67.7rem;
+        height: 63.6rem;
     }
     position: relative;
     .bg {
@@ -274,36 +289,44 @@ export const GameSystemSection = styled.section`
     }
 `
 
-export const GameInnerWrapper = styled.div`
+export const GameInnerWrapper = styled(InnerWrapper)`
     width: 100%;
     height: 100%;
     position: relative;
 `
 
 export const GameTitle = styled.h2`
-    width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 3rem;
-    left: 0;
-    right: 0;
+    margin: 0;
+    @media(min-width: 768px) {
+        width: 65.8rem;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 3.4rem;
+        left: 36.8rem;
+    }
+    img {
+        width: 100%;
+    }
 `
 
 export const SystemList = styled(List)`
-    width: 100%;
+    @media(min-width: 768px) {
+        width: 109.2rem;
+    }   
     display: flex;
-    justify-content: center;
     position: absolute;
-    bottom: 7rem;
-    left: 0;
-    right: 0;
-    gap: 1rem;
+    bottom: 7.6rem;
+    left: 15.4rem;
 `
 
 export const SystemItem = styled(ListItem)`
+    @media(min-width: 768px) {
+        width: 27.3rem;
+    }
     position: relative;
     img {
+        width: 100%;
         :first-child {
             opacity: 1;
             transition: transform .5s ease;
@@ -391,12 +414,14 @@ export const KkrText = styled.p`
 `
 
 export const GoodsLeftContent = styled.div`
+    width: 48%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 `
 
 export const Texts = styled.div`
+    width: 48%;
     display: flex;
     flex-direction: column;
     align-items: center;
