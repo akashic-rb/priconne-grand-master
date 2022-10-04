@@ -4,6 +4,7 @@ import topBg from "../assets/kv.jpg"
 import mobileTopBg from "../assets/Mobile/kv.png"
 import headline from "../assets/Story/story_bg_story.png"
 import storyBg from "../assets/Story/story_bg.jpg"
+import mbStoryBg from "../assets/Mobile/story_bg.jpg"
 import gameBg from "../assets/GameSystem/game_bg.jpg"
 import goodsBg from "../assets/Goods/goods_bg.png"
 import goodsBgGoods from "../assets/Goods/goods_bg_goods.png"
@@ -239,13 +240,18 @@ export const StyledListItem = styled(ListItem)`
 // STORY SECTION
 export const StorySection = styled.section`
     width: 100%;
+    height: 127.7rem;
     position: relative;
-    background-image: url(${storyBg.src});
-    background-size: cover;
-    background-position: center;
-    font-size: 0;
+    background-image: url(${mbStoryBg.src});
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
     @media (min-width: 768px) {
+        font-size: 0;
         height: 99.7rem;
+        background-image: url(${storyBg.src});
+        background-size: cover;
+        background-position: center;
     }
     :after {
         content: "";
@@ -258,6 +264,9 @@ export const StorySection = styled.section`
         top: 0;
         left: 0;
         bottom: 0;
+        @media(max-width: 767px) {
+            content: none;
+        }
     }
 `
 
@@ -268,36 +277,60 @@ export const StoryInnerWrapper = styled(InnerWrapper)`
 
 export const StoryContent = styled.div`
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-    position: absolute;
-    right: 5rem;
+    position: relative;
+    @media(min-width: 768px) {
+        display: flex;
+        position: absolute;
+        right: 5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+    }
     img {
         width: 100%;
     }
     .story-title {
+        position: absolute;
+        width: 35.5rem;
+        right: 4.9rem;
+        top: 22.3rem;
+        margin: 0;
         @media(min-width: 768px) {
+            position: relative;
             width: 32.2rem;
-            margin-left: 22.5rem; 
+            margin-left: 22.5rem;
         }
     }
     .text-1 {
+        width: 68.5rem;
+        position: absolute;
+        top: 38.1rem;
+        left: 5.7rem; 
         @media(min-width: 768px) {
+            position: relative;
             width: 46.5rem;
             margin-left: 5rem;
         }
     }
     .text-2 {
+        width: 73.8rem; 
+        position: absolute;
+        top: 59.4rem;
+        left: 0.5rem;
         @media(min-width: 768px) {
+            position: relative;
             width: 54.3rem;
             margin-right: 2.5rem;
         }
     }
     .text-3 {
+        width: 73.6rem;
+        position: absolute;
+        top: 80.7rem;
+        left: 0.6rem;
         @media(min-width: 768px) {
+            position: relative;
             width: 54.9rem;
             margin-right: 4.2rem;
         }

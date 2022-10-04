@@ -43,9 +43,13 @@ import movieThumb from "../assets/movie_thumb.png"
 import mbMovieThumb from "../assets/Mobile/movie_thumb.png"
 import useAutoplayVideo from '../hooks/useAutoplayVideo'
 import storyTitle from "../assets/Story/story_title.png"
+import mbStoryTitle from "../assets/Mobile/story_title.png"
 import text1 from "../assets/Story/story_text_01.png"
+import mbText1 from "../assets/Mobile/story_text_01.png"
 import text2 from "../assets/Story/story_text_02.png"
+import mbText2 from "../assets/Mobile/story_text_02.png"
 import text3 from "../assets/Story/story_text_03.png"
+import mbText3 from "../assets/Mobile/story_text_03.png"
 import FadeInComponent from '../components/FadeInComponent/FadeInComponent'
 import Carousel from '../components/Carousel/Carousel'
 import gameTitle from "../assets/GameSystem/game_title.png"
@@ -130,7 +134,7 @@ export default function Home() {
             <FadeInComponent>
               <h2 className="story-title">
                 <picture>
-                  <source srcSet={storyTitle.src}/>
+                  <source srcSet={mbStoryTitle.src}/>
                   <img src={storyTitle.src} alt="Story" />
                 </picture>
               </h2>
@@ -138,7 +142,7 @@ export default function Home() {
             <FadeInComponent>
               <p className="text-1">
                 <picture>
-                  <source srcSet={text1.src}/>
+                  <source srcSet={mbText1.src}/>
                   <img src={text1.src} alt="美しき大地アストライア大陸の王都『ランドソル』……ギルド【美食殿】のメンバーとして暮らしていたあなたがある時目を覚ましたのは、はじめて見る建物の中だった。" />
                 </picture>
               </p>
@@ -146,7 +150,7 @@ export default function Home() {
             <FadeInComponent>
               <p className="text-2">
                 <picture>
-                  <source srcSet={text2.src}/>
+                  <source srcSet={mbText2.src}/>
                   <img src={text2.src} alt="先に気がついていた小さなガイド役の少女同じギルドの仲間でもあるコッコロとともにあなたは元いた世界へ戻る方法と、仲間たちを探そうと決意する。"/>
                 </picture>
               </p>
@@ -154,7 +158,7 @@ export default function Home() {
             <FadeInComponent>
               <p className="text-3">
                 <picture>
-                  <source srcSet={text3.src}/>
+                  <source srcSet={mbText3.src}/>
                   <img src={text3.src} alt="本来の戦い方が通用しない不思議な世界を巡りながらあなたは記憶をなくした仲間たちを見つけ出していく。仲間たちの記憶を取り戻すには、「バトル」が鍵となるようで……？"/>
                 </picture>
               </p>
