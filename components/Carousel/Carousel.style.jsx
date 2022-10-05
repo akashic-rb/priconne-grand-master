@@ -13,8 +13,17 @@ export const LeaderTitle = styled.h2`
     top: 21.8rem;
     right: 6.8rem;
     z-index: 1000;
+    margin: 0;
     img {
+        width: 32.2rem;
+    }
+    @media(min-width: 768px) {
         width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 5.10714vw;
+        right: 0;
+        left: 0;
     }
 `
 
@@ -56,6 +65,9 @@ export const Paginator = styled.div`
     bottom: 8rem;
     left: 0;
     right: 0;
+    @media(min-width: 768px) {
+        bottom: 2.5vw;
+    }
 `
 
 export const PagiItem = styled.div`
@@ -122,6 +134,13 @@ export const LeaderStats = styled.div`
     right: 0;
     img {
         width: 100%;
+    }
+    @media(min-width: 768px) {
+        font-size: 0;
+        width: 50.64286vw;
+        top: 3.67857vw;
+        right: 1.64286vw;
+        transform: translateZ(0);
     }
 `
 

@@ -356,6 +356,7 @@ export const StoryContent = styled.div`
 export const LeaderSection = styled.section`
     width: 100%;
     height: 117.5rem;
+    overflow: hidden;
     @media(min-width: 768px) {
         height: 56.25vw;
     }
