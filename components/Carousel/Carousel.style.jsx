@@ -8,13 +8,14 @@ export const CarouselWrapper = styled.div`
 `
 
 export const LeaderTitle = styled.h2`
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    width: 33.1rem;
     position: absolute;
-    top: 3.2rem;
-    left: 0;
-    right: 0;
+    top: 21.8rem;
+    right: 6.8rem;
+    z-index: 1000;
+    img {
+        width: 100%;
+    }
 `
 
 const ControllerBtn = styled.div`
@@ -33,11 +34,15 @@ const ControllerBtn = styled.div`
 export const NextBtn = styled(ControllerBtn)`
     background-image: url(${NextSvg});
     right: 0;
+    display: relative;
+    z-index: 999;
 `
 
 export const PrevBtn = styled(ControllerBtn)`
     background-image: url(${PrevSvg});
     left: 0;
+    display: relative;
+    z-index: 999;
 `
 
 export const Paginator = styled.div`
@@ -48,7 +53,7 @@ export const Paginator = styled.div`
     align-items: center;
     gap: 1rem;
     position: absolute;
-    bottom: 3rem;
+    bottom: 8rem;
     left: 0;
     right: 0;
 `
@@ -85,3 +90,38 @@ export const PagiItem = styled.div`
         height: 100%;
     }
 `
+
+// Content
+export const ContentWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    position: relative;
+`
+
+export const CarouselItem = styled.div`
+    width: 100%;
+    height: 100%;
+    position: relative;
+`
+
+export const LeaderBg = styled.div`
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    img {
+        width: 100%;
+    }
+`
+
+export const LeaderStats = styled.div`
+    width: 71.1rem; 
+    position: absolute;
+    top: 35.5rem;
+    right: 0;
+    img {
+        width: 100%;
+    }
+`
+

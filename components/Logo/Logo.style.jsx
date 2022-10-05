@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.h1`
+export const Wrapper = styled.p`
     transition: opacity 0;
     @media (min-width: 768px) {
         position: absolute;
         width: 30rem;
-        top: 0;
-        left: 0;
+        top: 0.5rem;
+        left: 1.3rem;
         margin: 0;
     }
     @media(max-width: 767px) {
@@ -21,6 +21,7 @@ export const Wrapper = styled.h1`
 
 export const StyledImage = styled.img`
     width: 100%;
+    height: auto;
 `
 
 export const ScrollLogoWrapper = styled.div`

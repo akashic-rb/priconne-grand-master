@@ -76,6 +76,8 @@ export const ServiceInfo = styled.p`
         bottom: 5.5vw;
         right: 1.65vw;
         margin: 0;
+        left: unset;
+        transform: translate(0, 0);
     }
     img {
         width: 100%
@@ -232,6 +234,9 @@ export const StyledListItem = styled(ListItem)`
                 display: none;
             }
         }
+        img {
+            width: 100%;
+        }
     }
 `
 
@@ -299,7 +304,9 @@ export const StoryContent = styled.div`
         @media(min-width: 768px) {
             position: relative;
             width: 32.2rem;
-            margin-left: 22.5rem;
+            margin-left: 17.5rem;
+            right: unset;
+            top: unset;
         }
     }
     .text-1 {
@@ -311,6 +318,8 @@ export const StoryContent = styled.div`
             position: relative;
             width: 46.5rem;
             margin-left: 5rem;
+            top: unset;
+            left: unset;
         }
     }
     .text-2 {
@@ -322,6 +331,8 @@ export const StoryContent = styled.div`
             position: relative;
             width: 54.3rem;
             margin-right: 2.5rem;
+            top: unset;
+            left: unset;
         }
     }
     .text-3 {
@@ -333,6 +344,8 @@ export const StoryContent = styled.div`
             position: relative;
             width: 54.9rem;
             margin-right: 4.2rem;
+            top: unset;
+            left: unset;
         }
     }
 `
@@ -342,8 +355,9 @@ export const StoryContent = styled.div`
 // LEADER SECTION
 export const LeaderSection = styled.section`
     width: 100%;
+    height: 117.5rem;
     @media(min-width: 768px) {
-        height: 110vh;
+        height: 56.25vw;
     }
 `
 // END LEADER SECTION

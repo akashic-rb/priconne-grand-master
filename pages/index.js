@@ -168,9 +168,9 @@ export default function Home() {
       </StorySection>
 
       {/* Leader Section */}
-      {/* <LeaderSection id="leaders">
+      <LeaderSection id="leaders">
         <Carousel></Carousel>
-      </LeaderSection> */}
+      </LeaderSection>
 
       {/* Game System Section */}
       {/* <GameSystemSection id="game-system">

@@ -22,8 +22,8 @@ export const Header = styled.header`
 export const HeaderWrapper = styled.div`
     width: 100%;
     height: 100%;
-    position: relative;
     @media(max-width: 767px) {
+        position: relative;
         background-image: url(${mobileHeaderBg.src});
         background-size: 100% 100%;
         background-repeat: no-repeat; 
@@ -34,11 +34,11 @@ export const HeaderWrapper = styled.div`
 
 export const InnerHeader = styled.div`
     position: relative;
+    margin: 0 auto;
     @media(max-width: 767px) {
         width: 65rem;
         height: 100%;
         padding: 12.9rem 0;
-        margin: 0 auto;
         z-index: 10001;
     }
     @media(min-width: 768px) {
@@ -56,6 +56,9 @@ export const Nav = styled.nav`
     margin: 0 12rem;
     top: 0;
     right: 0;
+    @media(min-width: 768px) {
+        margin: 0;
+    }
 `
 
 export const HeaderCloseBtn = styled.button`

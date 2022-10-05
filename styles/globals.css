@@ -6,12 +6,12 @@
 @media (min-width: 768px) {
   html { 
     line-height: 1.15;
-    font-size: .71429vw;
+    font-size: .71429vw !important;
   }
 }
 @media (min-width: 1400px) {
   html { 
-    font-size: 10px;
+    font-size: 10px !important;
   }
 }
 

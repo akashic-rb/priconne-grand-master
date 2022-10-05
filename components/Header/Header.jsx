@@ -31,7 +31,7 @@ const PageHeader = () => {
     console.log(width);
     return (
         <>
-        { (isOpenHeader) &&
+        { (isOpenHeader || width >= 768) &&
         <Header>
             <HeaderWrapper>
                 <InnerHeader>
