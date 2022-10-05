@@ -366,10 +366,12 @@ export const LeaderSection = styled.section`
 // GAME SYSTEM SECTION
 export const GameSystemSection = styled.section`
     width: 100%;
+    height: 109.6rem;
+    position: relative;
+    overflow: hidden;
     @media(min-width: 768px) {
         height: 63.6rem;
     }
-    position: relative;
     .bg {
         width: 100%;
         height: 100%;
@@ -409,17 +411,24 @@ export const GameTitle = styled.h2`
 `
 
 export const SystemList = styled(List)`
+    width: 69.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 5rem;
+    left: 2.6rem;
     @media(min-width: 768px) {
         width: 109.2rem;
+        bottom: 7.6rem;
+        left: 15.4rem;
     }   
-    display: flex;
-    position: absolute;
-    bottom: 7.6rem;
-    left: 15.4rem;
 `
 
 export const SystemItem = styled(ListItem)`
+    width: 35.6rem;
+    margin-right: -1.5rem;
     @media(min-width: 768px) {
+        margin-right: 0;
         width: 27.3rem;
     }
     position: relative;

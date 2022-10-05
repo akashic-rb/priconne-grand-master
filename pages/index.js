@@ -173,7 +173,7 @@ export default function Home() {
       </LeaderSection>
 
       {/* Game System Section */}
-      {/* <GameSystemSection id="game-system">
+      <GameSystemSection id="game-system">
         <div className="bg"></div>
         <InnerWrapper>
           <FadeInComponent>
@@ -228,7 +228,7 @@ export default function Home() {
             </SystemItem>
           </SystemList>
         </InnerWrapper>
-      </GameSystemSection> */}
+      </GameSystemSection>
       
       {/* Goods Section */}
       {/* <GoodsSection id="goods">
