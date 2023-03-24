@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useState } from "react";
 import { 
     CarouselItem,
     CarouselWrapper, 
@@ -42,7 +43,6 @@ import mbChara06 from "../../assets/Mobile/chara_06.png"
 import mbBg06 from "../../assets/Mobile/chara_bg_06.jpg"
 import leaderIcon06Off from "../../assets/Leader/leader_icon_06_off.png"
 import leaderIcon06On from "../../assets/Leader/leader_icon_06_on.png"
-import { useEffect, useMemo, useState } from "react";
 
 
 const Carousel = () => {

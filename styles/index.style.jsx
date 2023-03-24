@@ -8,6 +8,7 @@ import mbStoryBg from "../assets/Mobile/story_bg.jpg"
 import gameBg from "../assets/GameSystem/game_bg.jpg"
 import goodsBg from "../assets/Goods/goods_bg.png"
 import goodsBgGoods from "../assets/Goods/goods_bg_goods.png"
+import mobileBgGoods from "../assets/Goods/mobile_goods_bg.png"
 
 export const Wrapper = styled.div`
     width: 100%;
@@ -38,10 +39,9 @@ export const TopSection = styled.section`
 `
 
 export const InnerWrapper = styled.div`
-    width: 100%;
-    height: 100%;
-    position: relative;
     @media(min-width: 768px) {
+        width: 100%;
+        height: 100%;
         max-width: 1400px;
         margin: 0 auto;
     }
@@ -461,24 +461,33 @@ export const SystemItem = styled(ListItem)`
 
 // GOOODS SECTION
 export const GoodsSection = styled.section`
-    width: 100%;
-    height: 66.7rem;
-    background-image: url(${goodsBg.src});
+    height: 123.6rem;
+    background-image: url(${mobileBgGoods.src});
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     position: relative;
-    :after {
-        content: '';
-        display: block;
-        @media(min-width: 768px) {
-            width: 13.4rem;
-            height: 100%;
-        }
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-image: url(${goodsBgGoods.src});
-        background-size: auto 100%;
+
+    @media (min-width: 767px) {
+        width: 100%;
+        height: 66.7rem;
+        background-image: url(${goodsBg.src});
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        :after {
+            content: '';
+            display: block;
+            @media(min-width: 768px) {
+                width: 13.4rem;
+                height: 100%;
+            }
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-image: url(${goodsBgGoods.src});
+            background-size: auto 100%;
+        }   
     }
 `
 
@@ -501,22 +510,67 @@ export const GoodsContentWrapper = styled.div`
 `
 
 export const GoodsTitle = styled.h2`
-    img {
-        width: 50%;
+    position: absolute;
+    width: 29.8rem;
+    top: 15.6rem;
+    left: 22.7rem;
+
+    @media (min-width: 767px) {
+        position: absolute;
+        width: 22.6rem;
+        top: 16.8rem;
+        left: 21.6rem;
+    }
+    picture {
+        width: auto;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 `
 
 export const GoodsText = styled.p`
-    img {
-        width: 90%;
-        margin: 0 0 0 1.5rem;
+    position: absolute;
+    width: 54.7rem;
+    top: 32.5rem;
+    left: 10rem;
+
+    picture {
+        width: auto;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    @media (min-width: 767px) {
+        position: absolute;
+        width: 42.8rem;
+        top: 31.8rem;
+        left: 23.4rem;
     }
 `
 
 export const KkrText = styled.p`
-    img {
-        width: 80%;
-        padding: 1.5rem 0 0 0;
+    position: absolute;
+    width: 47.9rem;
+    top: 45rem;
+    left: 13.5rem;
+    picture {
+        width: auto;
+        height: auto;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (min-width: 767px) {
+        width: 36.7rem;
+        top: 44.5rem;
+        left: 23.4rem;
     }
 `
 
@@ -528,16 +582,27 @@ export const GoodsLeftContent = styled.div`
 `
 
 export const Texts = styled.div`
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    position: absolute;
+    width: 69.3rem;
+    top: 59.3rem;
+
     p {
         margin: 0
     }
     img {
         width: 100%;
+    }
+    @media (min-width: 767px) {
+        width: 48.6rem;
+        top: 16.7rem;
+        right: 20rem;
+        left: unset;
+        transform: none;
     }
 `
 // END GOODS SECTION

@@ -3,14 +3,14 @@ import { useContext, useRef } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Logo } from "../components/Logo/Logo"
-import { 
-  GameLogo, 
-  ServiceInfo, 
+import {
+  GameLogo,
+  ServiceInfo,
   StoreList,
-  Stores, 
+  Stores,
   MovieList,
-  StyledListItem, 
-  TopSection, 
+  StyledListItem,
+  TopSection,
   BgMovie,
   StorySection,
   StoryContent,
@@ -62,11 +62,18 @@ import gameBtn3On from "../assets/GameSystem/game_btn_3_on.png"
 import gameBtn4Off from "../assets/GameSystem/game_btn_4_off.png"
 import gameBtn4On from "../assets/GameSystem/game_btn_4_on.png"
 import goodsTitle from "../assets/Goods/goods_title.png"
+import mobileGoodsTitle from "../assets/Goods/mobile_goods_title.png"
 import goodsText from "../assets/Goods/goods_text.png"
+import mobileGoodsText from "../assets/Goods/mobile_goods_text.png"
 import goodsKokkoro from "../assets/Goods/goods_kokkoro.png"
+import mobileGoodsKokkoro from "../assets/Goods/mobile_goods_kokkoro.png"
 import goods1 from "../assets/Goods/goods_1_off.png"
+import mobileGoods1 from "../assets/Goods/mobile_goods_1.png"
 import goods2 from "../assets/Goods/goods_2_off.png"
+import mobileGoods2 from "../assets/Goods/mobile_goods_2.png"
 import goods3 from "../assets/Goods/goods_3_off.png"
+import mobileGoods3 from "../assets/Goods/mobile_goods_3.png"
+import PageFooter from '../components/Footer/Footer'
 
 export default function Home() {
   const refVideo = useRef()
@@ -80,19 +87,19 @@ export default function Home() {
         <meta name="description" content="プリコネ！グランドマスターズ 完全無料アプリ！期間限定で公開！" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <TopSection id="top">
         <Logo></Logo>
         {/* Bg Movie */}
         <BgMovie>
           <video ref={refVideo} onEnded={hideVideo} muted playsInline>
-            <source src={"/videos/top_movie.mp4"}/>
+            <source src={"/videos/top_movie.mp4"} />
           </video>
         </BgMovie>
         {/* Service info */}
         <ServiceInfo>
           <picture>
-            <source media="(max-width: 767px)" srcSet={mbServiceInfo.src}/>
+            <source media="(max-width: 767px)" srcSet={mbServiceInfo.src} />
             <img src={serviceInfo.src} alt="公開期間が終了しました プレイしていただき誠にありがとうございました 引き続きプリンセスコネクト！Re:Diveをよろしくお願いします" />
           </picture>
         </ServiceInfo>
@@ -117,10 +124,10 @@ export default function Home() {
             </a>
           </StyledListItem>
           <StyledListItem className="movie2">
-            <img className="game-text" src={gameplayText.src} alt="ゲームプレイPV"/>
+            <img className="game-text" src={gameplayText.src} alt="ゲームプレイPV" />
             <a>
               <picture>
-                <source media="(max-width: 767px)" srcSet={mbMovieThumb.src}/>
+                <source media="(max-width: 767px)" srcSet={mbMovieThumb.src} />
                 <img src={movieThumb.src} alt="ゲームプレイ" />
               </picture>
             </a>
@@ -134,7 +141,7 @@ export default function Home() {
             <FadeInComponent>
               <h2 className="story-title">
                 <picture>
-                  <source srcSet={mbStoryTitle.src}/>
+                  <source srcSet={mbStoryTitle.src} />
                   <img src={storyTitle.src} alt="Story" />
                 </picture>
               </h2>
@@ -142,7 +149,7 @@ export default function Home() {
             <FadeInComponent>
               <p className="text-1">
                 <picture>
-                  <source srcSet={mbText1.src}/>
+                  <source srcSet={mbText1.src} />
                   <img src={text1.src} alt="美しき大地アストライア大陸の王都『ランドソル』……ギルド【美食殿】のメンバーとして暮らしていたあなたがある時目を覚ましたのは、はじめて見る建物の中だった。" />
                 </picture>
               </p>
@@ -150,16 +157,16 @@ export default function Home() {
             <FadeInComponent>
               <p className="text-2">
                 <picture>
-                  <source srcSet={mbText2.src}/>
-                  <img src={text2.src} alt="先に気がついていた小さなガイド役の少女同じギルドの仲間でもあるコッコロとともにあなたは元いた世界へ戻る方法と、仲間たちを探そうと決意する。"/>
+                  <source srcSet={mbText2.src} />
+                  <img src={text2.src} alt="先に気がついていた小さなガイド役の少女同じギルドの仲間でもあるコッコロとともにあなたは元いた世界へ戻る方法と、仲間たちを探そうと決意する。" />
                 </picture>
               </p>
             </FadeInComponent>
             <FadeInComponent>
               <p className="text-3">
                 <picture>
-                  <source srcSet={mbText3.src}/>
-                  <img src={text3.src} alt="本来の戦い方が通用しない不思議な世界を巡りながらあなたは記憶をなくした仲間たちを見つけ出していく。仲間たちの記憶を取り戻すには、「バトル」が鍵となるようで……？"/>
+                  <source srcSet={mbText3.src} />
+                  <img src={text3.src} alt="本来の戦い方が通用しない不思議な世界を巡りながらあなたは記憶をなくした仲間たちを見つけ出していく。仲間たちの記憶を取り戻すには、「バトル」が鍵となるようで……？" />
                 </picture>
               </p>
             </FadeInComponent>
@@ -179,7 +186,7 @@ export default function Home() {
           <FadeInComponent>
             <GameTitle>
               <picture>
-                <source srcSet={gameTitle.src}/>
+                <source srcSet={gameTitle.src} />
                 <img src={gameTitle.src} alt="ゲームシステム" />
               </picture>
             </GameTitle>
@@ -229,66 +236,66 @@ export default function Home() {
           </SystemList>
         </InnerWrapper>
       </GameSystemSection>
-      
+
       {/* Goods Section */}
-      {/* <GoodsSection id="goods">
+      <GoodsSection id="goods">
         <GoodsInnerWrapper>
-          <GoodsContentWrapper>
-            <GoodsLeftContent>
-              <FadeInComponent>
-                <GoodsTitle>
-                  <picture>
-                    <source srcSet={goodsTitle.src}/>
-                    <img src={goodsTitle.src} alt="グッズ" />
-                  </picture>
-                </GoodsTitle>
-              </FadeInComponent>
-              <FadeInComponent>
-                <GoodsText>
-                  <picture>
-                    <source srcSet={goodsText.src}/>
-                    <img src={goodsText.src} alt="おしゃべりチエルちゃん、猛訓打撃道！プリコネR野球盤、エリザベスパークの特大顔出しパネルがプリコネ！グランドマスターズにも登場！ゲーム内のどこにいるか探してみてね！" />
-                  </picture>
-                </GoodsText>
-              </FadeInComponent>
-              <FadeInComponent>
-                <KkrText>
-                  <picture>
-                    <source srcSet={goodsKokkoro.src}/>
-                    <img src={goodsKokkoro.src} alt="販売は終了しました！" />
-                  </picture>
-                </KkrText>
-              </FadeInComponent>
-            </GoodsLeftContent>
-            <Texts>
-              <FadeInComponent>
-                <p>
-                  <picture>
-                    <source srcSet={goods1.src}/>
-                    <img src={goods1.src} alt="おしゃべりチエルちゃん 新規で録り下ろされた音声内蔵のぬいぐるみ！" />
-                  </picture>
-                </p>
-              </FadeInComponent>
-              <FadeInComponent>
-                <p>
-                  <picture>
-                    <source srcSet={goods2.src}/>
-                    <img src={goods2.src} alt="猛訓打撃道！プリコネR野球盤 エポック社の全面協力により、あの野球盤がプリコネバージョンに！" />
-                  </picture>
-                </p>
-              </FadeInComponent>
-              <FadeInComponent>
-                <p>
-                  <picture>
-                    <source srcSet={goods3.src}/>
-                    <img src={goods3.src} alt="エリザベスパークの特大顔出しパネル エリザベスパークに設置されていた顔出しパネルを実寸で商品化！" />
-                  </picture>
-                </p>
-              </FadeInComponent>
-            </Texts>
-          </GoodsContentWrapper>
+          {/* <GoodsContentWrapper> */}
+          <FadeInComponent>
+            <GoodsTitle>
+              <picture>
+                <source media={"(max-width: 767px)"} srcSet={mobileGoodsTitle.src} />
+                <img src={goodsTitle.src} alt="グッズ" />
+              </picture>
+            </GoodsTitle>
+          </FadeInComponent>
+          <FadeInComponent>
+            <GoodsText>
+              <picture>
+                <source media='(max-width: 767px)' srcSet={mobileGoodsText.src} />
+                <img src={goodsText.src} alt="おしゃべりチエルちゃん、猛訓打撃道！プリコネR野球盤、エリザベスパークの特大顔出しパネルがプリコネ！グランドマスターズにも登場！ゲーム内のどこにいるか探してみてね！" />
+              </picture>
+            </GoodsText>
+          </FadeInComponent>
+          <FadeInComponent>
+            <KkrText>
+              <picture>
+                <source media='(max-width: 767px)' srcSet={mobileGoodsKokkoro.src} />
+                <img src={goodsKokkoro.src} alt="販売は終了しました！" />
+              </picture>
+            </KkrText>
+          </FadeInComponent>
+          <Texts>
+            <FadeInComponent>
+              <p>
+                <picture>
+                  <source media='(max-width: 767px)' srcSet={mobileGoods1.src} />
+                  <img src={goods1.src} alt="おしゃべりチエルちゃん 新規で録り下ろされた音声内蔵のぬいぐるみ！" />
+                </picture>
+              </p>
+            </FadeInComponent>
+            <FadeInComponent>
+              <p>
+                <picture>
+                  <source media='(max-width: 767px)' srcSet={mobileGoods2.src} />
+                  <img src={goods2.src} alt="猛訓打撃道！プリコネR野球盤 エポック社の全面協力により、あの野球盤がプリコネバージョンに！" />
+                </picture>
+              </p>
+            </FadeInComponent>
+            <FadeInComponent>
+              <p>
+                <picture>
+                  <source media='(max-width: 767px)' srcSet={mobileGoods3.src} />
+                  <img src={goods3.src} alt="エリザベスパークの特大顔出しパネル エリザベスパークに設置されていた顔出しパネルを実寸で商品化！" />
+                </picture>
+              </p>
+            </FadeInComponent>
+          </Texts>
+          {/* </GoodsContentWrapper> */}
         </GoodsInnerWrapper>
-      </GoodsSection> */}
+      </GoodsSection>
+
+      <PageFooter></PageFooter>
     </Wrapper>
   )
 }
